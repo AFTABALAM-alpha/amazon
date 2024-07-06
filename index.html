@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1 {
+        font-size: 30px;
+    }
+
+    #top,
+    button {
+        position: absolute;
+        height: 50px;
+        width: 350px;
+        top: 500px;
+        right: 200px;
+        font-size: 40px;
+
+    }
+
+    button {
+        width: 100px;
+        right: 100px;
+    }
+
+    #btn {
+        display: block;
+        position: static;
+    }
+</style>
+
+<body>
+    <h1 id="pro">
+    </h1>
+    <input type="text" placeholder="enter any one product " name="" id="top">
+    <button onclick="calculate()">enter</button>
+    <script>
+        let products, input, sec;
+        input={value:0}
+        sec = document.getElementById("pro")
+        input = document.getElementById("top")
+        let off = prompt("enter 1 'electonics item'  2 glosary item   3  fashonble item  ")
+         
+        function calculate(tag="0") {
+
+            console.log(tag,input.value);
+            if ( input.value="iphone" ^ tag == "iphone") {
+                sec.innerHTML = '  <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQUIsNusadYrsLIpSJUm4kWw8SgZW6U2MEaypSpVLi8E_5iN-7pznA9vEAathWi2DcNyRCnGsLgmcIs06KqFLagwshXzbVP6g" alt="iphone Img" width="200px"><br>iphone 15 pro max titanium  <br> price=1,48,900'
+
+            }
+
+
+            else if (input.value="sumsung" ^ tag == "samsung") {
+                sec.innerHTML = '<img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRCjyekLTGxFsl4qRLxSG1Z-mqNJWIzPgRkGKmbrbqdmOmpH6D2Rh8z-rRBfO2o1wfXa-uRmj_LDp0YsbFNCB6kCLfvZ3ts" alt="samsung img" width="200px"><br>  samsung S24 ultra    <br> price 119999'
+            }
+            else if (input.value="vivo" ^ tag == "vivo") {
+                sec.innerHTML = '<img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTpni-kUkIY6n4SsoAE-y7Ia2ZjvdIvAO7sexHj6bE1GVKDVvK4PdJSMKs6UTo38X-mIYgPR0FDZUFDeRGX6Vs_PW61fzzu" alt="vivo phones" width="200px"><br> vivo x series x100 pro 5G   <br>n price 90000'
+            }
+            else if (input.value="vivo T3x 5G" ^ tag == "vivo T3x 5G") {
+                sec.innerHTML = ' <img src="https://www.reliancedigital.in/medias/Vivo-T3X-Celestial-Green-Mobile-Phone-494353189-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w2OTUwN3xpbWFnZS9qcGVnfGltYWdlcy9oNTMvaGZlLzEwMTM0ODM2NTQzNTE4LmpwZ3wzZTk2NDNjZWM3Y2Q2NzEyZjkyMTM4ZWNhM2JiNGJmZDA2ZjE2OTQ3MTEzMjM4MmFmYTQ2MzgxNmVkNDcwMWFm" alt="vivo phones" width="200px"><br> vivo T3x 5G <br> price 16499'
+            }
+            else if (input.value="realme" ^ tag == "realme") {
+                sec.innerHTML = '<img src="https://fdn2.gsmarena.com/vv/bigpic/realme-narzo-20.jpg" alt="realme mobile" width="200px"><br><br> realme nazro 20<br> price  13999'
+            }
+
+        }
+     
+        if (off == "1") {
+            products = prompt("1,mobile phones  2, laptop   3,computer 4, camera   ")
+            if (products == "1") {
+
+                sec = document.getElementById("pro")
+                sec.innerHTML = ' <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQUIsNusadYrsLIpSJUm4kWw8SgZW6U2MEaypSpVLi8E_5iN-7pznA9vEAathWi2DcNyRCnGsLgmcIs06KqFLagwshXzbVP6g" onclick=calculate("iphone")  alt="iphone Img" width="200px"><br>iphone 15 pro max titanium  <br> <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRCjyekLTGxFsl4qRLxSG1Z-mqNJWIzPgRkGKmbrbqdmOmpH6D2Rh8z-rRBfO2o1wfXa-uRmj_LDp0YsbFNCB6kCLfvZ3ts" onclick=calculate("samsung") alt="samsung img" width="200px"><br>  samsung S24 ultra    <br> <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTpni-kUkIY6n4SsoAE-y7Ia2ZjvdIvAO7sexHj6bE1GVKDVvK4PdJSMKs6UTo38X-mIYgPR0FDZUFDeRGX6Vs_PW61fzzu" onclick=calculate("vivo") alt="vivo phones" width="200px"><br> vivo x series x100 pro 5G   <br> <img src="https://www.reliancedigital.in/medias/Vivo-T3X-Celestial-Green-Mobile-Phone-494353189-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w2OTUwN3xpbWFnZS9qcGVnfGltYWdlcy9oNTMvaGZlLzEwMTM0ODM2NTQzNTE4LmpwZ3wzZTk2NDNjZWM3Y2Q2NzEyZjkyMTM4ZWNhM2JiNGJmZDA2ZjE2OTQ3MTEzMjM4MmFmYTQ2MzgxNmVkNDcwMWFm" onclick=calculate("vivoTx5G") alt="vivo phones" width="200px"><br> vivo T3x 5G <br><img src="https://fdn2.gsmarena.com/vv/bigpic/realme-narzo-20.jpg" onclick=calculate("realme") alt="realme mobile" width="200px"><br><br> realme nazro 20';
+            }
+        
+        }
+        if (off == "1") {
+            if (products == "2") 
+        
+
+                sec = document.getElementById("pro")
+                sec.innerHTML ='<img src="" onclick=calculate("Dell")  alt=" Img" width="200px"><br> ';
+        } 
+
+        else if (off == "2") {
+            products = prompt(" 1,flour 2,rice  3,vegetables  4, fruits ")
+
+        }
+        else if (off == "3") {
+            products = prompt(" 1, outfit  2, watch 3, shoes  4,  cap")
+
+        }
+        else {
+            document.write("choose any one only ")
+        }
+    </script>
+</body>
+
+</html>
